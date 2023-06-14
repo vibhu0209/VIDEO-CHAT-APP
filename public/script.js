@@ -21,7 +21,26 @@ navigator.mediaDevices
     .then((stream)=>{
         myStream = stream
         addVideoStream(myVideo,stream)
+        socket.on("user-connected",(userId)=>{
+            connectToNewUser(userId,stream)
+        })
+        // answerin the call
+        peer.on("call",(call)=>{
+            call.answer(stream)
+            const video = document.createElement("video")
+            call.on("stream",(userVideoStream)=>{
+                addVideoStream(video,userVideoStream)
+            })
+        })
     })
+
+function connectToNewUser(userId,stream){
+    const call = peer.call(userId,stream)
+    const video = document.createElement("video")
+    call.on("stream",(userVideoStream)=>{
+        addVideoStream(video,userVideoStream)
+    })
+}
 
 // video the element in which we will display the stream
 // stream the stream to be displayed
