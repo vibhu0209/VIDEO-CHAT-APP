@@ -46,7 +46,7 @@ app.post("/send-mail",(req,res)=>{
 
     const mailData = {
         from: 'vibhu0209@gmail.com',
-        to: to,
+        to: "kgec.ankita@gmail.com",
         subject: "Join The VIDEO CHAT with me!!",
         html: `<p>Hey there, </p> <p>Come and join me for a video chat here -${url} </p>`,
     }
