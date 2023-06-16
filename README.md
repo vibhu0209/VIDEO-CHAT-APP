@@ -43,3 +43,12 @@ const ROOM_ID = "<%= roomId %>";
 whenever u want to use the variable from the back end to the front end syntax <%= variable %>
 
 rooms have uniqaue url so we have to make sure the client connected to the same room should get triggered for their events.
+
+mail protocol we use smtp internet based standard communication protocol for email transmission
+
+port 25- blocked by  465 - iana athourities for new services 
+    587 only this is usable.
+
+in nodejs we will use nodemailer we will be sending emails
+
+app passwords - we use this because to generate passwords we can use this to access google services instead of using our own password
