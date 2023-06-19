@@ -10,7 +10,8 @@ const { v4: uuidv4 } = require("uuid");
 const io = require("socket.io")(server, {
     cors: {
         origin: '*'
-    }
+    },
+    allowEI03 : true
 });
 
 const { ExpressPeerServer } = require("peer");
