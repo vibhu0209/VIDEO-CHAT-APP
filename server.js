@@ -54,7 +54,8 @@ app.post("/send-mail",(req,res)=>{
     }
     transporter.sendMail(mailData,(error,info) => {
         if(error){            
-           return console.log(error)            
+           return console.log("Hello Again")  
+                
         }
         res.status(200).send({message:"invitation sent!",message_id: info.messageId})    
     })
