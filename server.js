@@ -41,12 +41,14 @@ app.get("/:room", (req, res) => {
 });
 
 app.post("/send-mail",(req,res)=>{
+    // email of reciever
     const to = req.body.to
+    // url which reciever has to join
     const url = req.body.url
 
     const mailData = {
         from: 'vibhu0209@gmail.com',
-        to: "kgec.ankita@gmail.com",
+        to: to,
         subject: "Join The VIDEO CHAT with me!!",
         html: `<p>Hey there, </p> <p>Come and join me for a video chat here -${url} </p>`,
     }

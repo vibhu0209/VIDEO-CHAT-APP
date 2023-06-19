@@ -109,6 +109,28 @@ $(function () {
             $("#mute_button").html(html) 
         } 
     })
+
+    $("#invite_button").click(function (){
+        const to = prompt("Enter the email address")
+        let data = {
+            url: window.location.href,
+            to: to
+        }
+        $.ajax({
+            url:"/send-mail",
+            type: "POST",
+            data: JSON.stringify(data),
+            dataType: 'json',
+            contentType: 'application/json',
+            success: function (result){
+                alert("Invitation Sent, This might take a few seconds")
+            },
+            error: function (result){
+                console.log(result.responseJSON)
+            },
+
+        })
+    })
 })
 
 
