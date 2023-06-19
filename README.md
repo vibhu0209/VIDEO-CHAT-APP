@@ -52,3 +52,4 @@ port 25- blocked by  465 - iana athourities for new services
 in nodejs we will use nodemailer we will be sending emails
 
 app passwords - we use this because to generate passwords we can use this to access google services instead of using our own password
+<!-- Done -->

@@ -127,6 +127,7 @@ $(function () {
             },
             error: function (result){
                 console.log(result.responseJSON)
+                console.log("Hello")
             },
 
         })
@@ -147,3 +148,4 @@ socket.on("createMessage", (message, userName) => {
         </div>
     `)
 });
+// done
